@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Tracking</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <h1>Update Existing Customer</h1>
+
+    <form action="/updateSearch" method="POST" autocomplete="off">
+      <input type="number" name="customerID" placeholder="Enter customer ID to update">
+      <button class="searchButton" type="submit"> Search </button>      
+    </form>
+
+    <span class="error"><%= errMsg %></span>
+    <span class="success"><%= cnfMsg %></span>
+
+    <hr>
+
+    <form action="/updateUpdate" method="POST" autocomplete="off">
+      
+      <input type="hidden" value="<%= customerID %>" name="customerID" id="">
+      <div class="text-field">
+        <label for="">Customer ID: </label>
+        <input type="text" required value="<%= customerID %>" placeholder="Customer ID" disabled>
+      </div>
+
+      <div class="text-field">
+        <label for="">Customer Name: </label>
+        <input type="text" required value="<%= customerName %>" name="customerName" placeholder="Customer name">
+      </div>
+      
+      <div class="text-field">
+        <label for="">Contact: </label>
+        <input type="text" required value="<%= contact %>" name="contact" placeholder="Contact">
+      </div>
+      
+      <div class="text-field">
+        <label for="">Insurance Company: </label>
+        <input type="text" required value="<%= insuranceCompany %>" name="insuranceCompany" placeholder="Insurance company">
+      </div>
+
+      <div>
+        <label for="">Policy No: </label>
+        <input type="text" required value="<%= policyNumber %>" name="policyNumber" placeholder="Policy number">
+      </div>
+
+      <div class="text-field">
+        <label for="">Sum Insured: </label>
+        <input type="text" required value="<%= sumInsured %>" name="sumInsured" placeholder="Sum insured">
+      </div>
+
+      <div class="text-field">
+        <label for="">Policy Type: </label>
+        <input type="text" required value="<%= policyType %>" name="policyType" placeholder="Policy type">
+      </div>
+
+      <div class="text-field">
+        <label for="">Premium: </label>
+        <input type="text" required value="<%= premium %>" name="premium" placeholder="Premium">
+      </div>
+
+      <div class="text-field">
+        <label for="">Policy Term: </label>
+        <input type="text" required value="<%= policyTerm %>" name="policyTerm" placeholder="Policy Term">
+      </div>
+
+      <div class="text-field">
+        <label for="">PPT: </label>
+        <input type="text" required value="<%= ppt %>" name="ppt" placeholder="PPT">
+      </div>
+
+      <div class="text-field">
+        <label for="">Issuance Date: </label>
+        <input type="text" required value="<%= issuanceDate %>" name="issuanceDate" placeholder="Issuance date">
+      </div>
+
+      <div class="text-field">
+        <label for="">Renewal Date: </label>
+        <input type="text" required value="<%= renewalDate %>" name="renewalDate" placeholder="Renewal date">
+      </div>
+
+      <div class="text-field">
+        <label for="">No. Of Persons: </label>
+        <input type="text" required value="<%= noOfPersons %>" name="noOfPersons" placeholder="No. of persons">
+      </div>
+
+      <div class="text-field">
+        <label for="">Vehicle Type: </label>
+        <input type="text" required value="<%= vehicleType %>" name="vehicleType" placeholder="Vehicle type">
+      </div>
+
+      <div class="text-field">
+        <label for="">Capacity: </label>
+        <input type="text" required value="<%= capacity %>" name="capacity" placeholder="Capacity">
+      </div>
+
+      <div class="text-field">
+        <label for="">Make / Model: </label>
+        <input type="text" required value="<%= makeModel %>" name="makeModel" placeholder="Make / model">
+      </div>
+
+      <div class="text-field">
+        <label for="">Claim Status: </label>
+        <input type="text" required value="<%= claimStatus %>" name="claimStatus" placeholder="Claim status">
+      </div>
+            
+      <button class="searchButton" type="submit"> Update </button>
+      
+    </form>
+
+    <button class="goBack" onclick="window.location.href='/manage'"> Go Back </button>
+
+  </body>
+
+</html>

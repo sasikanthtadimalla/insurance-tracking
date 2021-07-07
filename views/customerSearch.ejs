@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Tracking</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>Search By Customer Name</h1>
+
+    <form class="" action="/customerSearch" method="post" autocomplete="off">
+      <input type="text" name="customerName" placeholder="Enter customer name" required>
+      <button class="searchButton" type="submit"> Search </button>
+    </form>
+
+    <span class="error"><%= errMsg %></span>
+    <span class="success"><%= cnfMsg %></span>
+
+    <hr>
+
+    <h3>No. Of People Found: <span class="id"><%= noOfPeople %></span></h3>
+
+    <div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Company</th>
+          <th>Policy No.</th>
+          <th>Sum Insured</th>
+          <th>Policy Type</th>
+          <th>Premium</th>
+          <th>Policy Term</th>
+          <th>PPT</th>
+          <th>Issuance Date</th>
+          <th>Renewal Date</th>
+          <th>No. Of Persons</th>
+          <th>Vehicle Type</th>
+          <th>Make / Model</th>
+          <th>Capacity</th>
+          <th>Claim Status</th>
+        </tr>
+
+        <% foundCustomers.forEach((customer) => { %>
+          <tr>
+            <td><%= customer.customerID %></td>
+            <td><%= customer.customerName %></td>
+            <td><%= customer.contact %></td>
+            <td><%= customer.insuranceCompany %></td>
+            <td><%= customer.policyNumber %></td>
+            <td><%= customer.sumInsured %></td>
+            <td><%= customer.policyType %></td>
+            <td><%= customer.premium %></td>
+            <td><%= customer.policyTerm %></td>
+            <td><%= customer.ppt %></td>
+            <td><%= customer.issuanceDate %></td>
+            <td><%= customer.renewalDate %></td>
+            <td><%= customer.noOfPersons %></td>
+            <td><%= customer.vehicleType %></td>
+            <td><%= customer.makeModel %></td>
+            <td><%= customer.capacity %></td>
+            <td><%= customer.claimStatus %></td>
+          </tr>
+        <% }) %>
+        
+
+    </table>
+    </div>
+
+    <button class="goBack" onclick="window.location.href='/'"> Go Back </button>
+
+  </body>
+
+</html>

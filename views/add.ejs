@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Tracking</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <h1>Add New Customer</h1>
+
+    <span class="error"><%= errMsg %></span>
+    <span class="success"><%= cnfMsg %><span class="id"><%= id %></span></span>
+
+    <form action="/add" method="POST" autocomplete="off">
+
+      <input type="text" required name="customerName"  autocomplete="off" placeholder="Customer name">
+      <input type="text" required name="contact" placeholder="Contact">
+      <input type="text" required name="insuranceCompany" placeholder="Insurance company">
+      <input type="text" required name="policyNumber" placeholder="Policy number">
+      <input type="text" required name="sumInsured" placeholder="Sum insured">
+      <input type="text" required name="policyType" placeholder="Policy type">
+      <input type="text" required name="premium" placeholder="Premium">
+      <input type="text" required name="policyTerm" placeholder="Policy Term">
+      <input type="text" required name="ppt" placeholder="PPT">
+      <input type="text" required name="issuanceDate" placeholder="Issuance date">
+      <input type="text" required name="renewalDate" placeholder="Renewal date">
+      <input type="text" required name="noOfPersons" placeholder="No. of persons">
+      <input type="text" required name="vehicleType" placeholder="Vehicle type">
+      <input type="text" required name="capacity"  autocomplete="off" placeholder="Capacity">
+      <input type="text" required name="makeModel" placeholder="Make / model">
+      <input type="text" required name="claimStatus" placeholder="Claim status">
+
+      <button class="searchButton" type="submit"> Submit </button>
+
+    </form>
+    
+    <button class="goBack" onclick="window.location.href='/manage'"> Go Back </button>
+
+  </body>
+
+</html>

@@ -1,0 +1,126 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  text-align: center;
+  background-color: antiquewhite;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-size: 1.5rem;
+  display: block;
+  margin: 2rem auto 5rem;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 5rem;
+}
+
+input {
+  font-size: 1.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+hr {
+  margin-bottom: 5rem;
+}
+
+div {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border: 3px solid;
+}
+
+table, th, td {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 1.2rem;  
+  border-collapse: collapse;
+}
+
+th {
+  background-color: grey;
+  color: white;
+  border: 1px black solid;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+}
+
+.customerSearch {
+  background-color: yellow;
+}
+
+.companySearch {
+  background-color: yellow;}
+
+.manageData {
+  background-color: yellowgreen;
+}
+
+.goBack {
+  background-color: tomato;
+  color: aliceblue;
+}
+
+.addCustomer {
+  background-color: yellowgreen;
+}
+
+.updateCustomer {
+  background-color: yellowgreen;
+}
+
+.deleteCustomer {
+  background-color:crimson;
+  color: aliceblue;
+}
+
+.searchButton {
+  background-color: grey;
+  color: aliceblue;
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.success {
+  color: green;
+  font-size: 1.2rem;
+}
+
+.id {
+  font-weight: bolder;
+}
+
+.text-field {
+  overflow-x: hidden;
+}
+
+.text-field input {
+  margin-top: 5px;
+  margin-bottom: 2rem;
+}
+
+.text-field label {
+  margin-bottom: 0;
+}
