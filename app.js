@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash");
@@ -10,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb+srv://admin-sasi:test123@cluster0.kgtzf.mongodb.net/itDB",{useNewUrlParser:!0,useCreateIndex:!0,useUnifiedTopology:!0});
+mongoose.connect("mongodb+srv://" + process.env.DB_USERNAME + ":" + process.env.DB_PASSWORD + "@cluster0.kgtzf.mongodb.net/itDB",{useNewUrlParser:!0,useCreateIndex:!0,useUnifiedTopology:!0});
 
 // mongoose.connect("mongodb://localhost:27017/itDB", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
